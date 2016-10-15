@@ -40,6 +40,7 @@ local function get_ad(slot, id)
 
 	res['impressions'] = tonumber(res['impressions'])
 	local ad_id = tonumber(res['id'])	
+	local hosted_by = tonumber(res['hosted_by'])
 	
 	local host = "http://52.193.220.196:8888/slots/"
 	if hosted_by == 1 then
@@ -82,7 +83,8 @@ if not res or res == ngx.null then
   return
 end
 
-local url = "http://52.193.220.196:8888/slots/" .. slot .. "/ads/" .. res["id"]
-ngx.redirect(url)
+-- local url = "http://52.193.220.196:8888/slots/" .. slot .. "/ads/" .. res["id"]
+-- ngx.redirect(url)
+ngx.say(cjson.encode(res))
 
 return
