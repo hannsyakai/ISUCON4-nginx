@@ -78,7 +78,7 @@ local c_front = c[1];
 local c_back = c[2];
 
 local sex = "-1";
-if not c_front == ngx.null and c_front and not c_front == "" then
+if c_front then
   sex = c_front;
 end
 

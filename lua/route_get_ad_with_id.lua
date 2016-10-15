@@ -41,7 +41,7 @@ local function get_ad(slot, id)
 	end
 	
 	res['asset'] = host  .. slot .. "/ads/" .. id .. "/asset"
-	res['couter'] = host .. slot .. "/ads/" .. id .. "/counter"
+	res['counter'] = host .. slot .. "/ads/" .. id .. "/counter"
 	res['redirect'] = host .. slot .. "/ads/" .. id .. "/redirect"
 
 	return res
