@@ -77,8 +77,8 @@ local c = split(ngx.var.c, "/");
 local c_front = c[1];
 local c_back = c[2];
 
-local sex = "unknown";
-if c_front then
+local sex = "-1";
+if not c_front == "" then
   sex = c_front;
 end
 
