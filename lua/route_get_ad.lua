@@ -42,7 +42,10 @@ local function get_ad(slot, id)
 	local ad_id = tonumber(res['id'])	
 	
 	local host = "http://52.193.220.196:8888/slots/"
-	if ad_id and ad_id % 2 == 1 then
+	if hosted_by == 1 then
+		host = "http://52.198.140.176:8888/slots/"
+	end
+	if hosted_by == 3 then
 		host = "http://52.192.211.180:8888/slots/"
 	end
 	
