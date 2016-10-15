@@ -79,7 +79,7 @@ if not res or res == ngx.null then
   return
 end
 
-local url = "http://52.193.220.196:8888/slots/ads/" .. res["id"]
+local url = "http://52.193.220.196:8888/slots/" .. slot .. "/ads/" .. res["id"]
 ngx.redirect(url)
 
 return
